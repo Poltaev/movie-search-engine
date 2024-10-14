@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.ui.ui.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/textViewed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="Просмотренно"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonAllViewed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="163dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/textViewed"
+                android:backgroundTint="@color/white"
+                android:stateListAnimator="@null"
+                android:text="Все"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewViewed"
+            android:layout_width="411dp"
+            android:layout_height="280dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/textCollections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Коллекция"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textSize="18dp" />
+
+
+        <Button
+            android:id="@+id/buttonMakeCollections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="+  Создать коллекцию" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCollections"
+            android:layout_width="411dp"
+            android:layout_height="280dp"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/textInteresting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="19dp"
+                android:textStyle="bold"
+                android:text="Вам было интересно"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/buttonAllHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="121dp"
+                android:layout_marginTop="11dp"
+                android:layout_toEndOf="@+id/textInteresting"
+                android:backgroundTint="@color/white"
+                android:stateListAnimator="@null"
+                android:text="Все"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHistory"
+            android:layout_width="411dp"
+            android:layout_height="280dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+</ScrollView>

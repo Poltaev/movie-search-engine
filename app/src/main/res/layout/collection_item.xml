@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFFFF"
+    android:paddingStart="10dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dp">
+
+
+    <ImageView
+        android:id="@+id/movieFilmographyButton"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false"
+        android:bottomLeftRadius="8dp"
+        android:bottomRightRadius="8dp"
+        android:cropToPadding="false"
+        android:defaultFocusHighlightEnabled="false"
+        android:duplicateParentState="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/frame_for_collection"
+        android:topLeftRadius="8dp"
+        android:topRightRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/buttonDeleteCollection"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/movieFilmographyButton"
+        android:layout_alignTop="@+id/movieFilmographyButton"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/blue100Transperent"
+        android:gravity="center"
+        android:src="@drawable/baseline_close_delete_collection"
+        app:layout_constraintStart_toStartOf="@+id/movieFilmographyButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/movieFilmographyButton"
+        android:layout_alignTop="@+id/movieFilmographyButton"
+        android:layout_alignEnd="@+id/movieFilmographyButton"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="83dp"
+        android:src="@drawable/baseline_favorite_collection"
+        app:layout_constraintEnd_toEndOf="@+id/movieFilmographyButton"
+        app:layout_constraintStart_toStartOf="@+id/movieFilmographyButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNameCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageCollection"
+        android:layout_alignStart="@+id/movieFilmographyButton"
+        android:layout_alignEnd="@+id/movieFilmographyButton"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="11dp"
+
+        android:text="TextView"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>
+

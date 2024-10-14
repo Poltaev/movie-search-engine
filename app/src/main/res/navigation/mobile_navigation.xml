@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.moviesearch.presentation.ui.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_listContentFragment"
+            app:destination="@id/listContentFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_serialPageFragment"
+            app:destination="@id/serialPageFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.moviesearch.presentation.ui.ui.search.SearchFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_filterSearchFragment"
+            app:destination="@id/filterSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.moviesearch.presentation.ui.ui.profile.ProfileFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_setCollectionFragment"
+            app:destination="@id/setCollectionFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_contentFromTheProfileFragment"
+            app:destination="@id/contentFromTheProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listContentFragment"
+        android:name="com.example.moviesearch.presentation.ui.listContent.ListContentFragment"
+        android:label="fragment_list_content"
+        tools:layout="@layout/fragment_list_content" >
+        <action
+            android:id="@+id/action_listContentFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_listContentFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_listContentFragment_to_serialPageFragment"
+            app:destination="@id/serialPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmographyFragment"
+        android:name="com.example.moviesearch.presentation.ui.filmography.FilmographyFragment"
+        android:label="FilmographyFragment"
+        tools:layout="@layout/fragment_filmography">
+        <action
+            android:id="@+id/action_filmographyFragment_to_actorInformationFragment"
+            app:destination="@id/actorInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterSearchFragment"
+        android:name="com.example.moviesearch.presentation.ui.filterSearch.FilterSearchFragment"
+        android:label="FilterSearchFragment"
+        tools:layout="@layout/fragment_filter_search">
+        <action
+            android:id="@+id/action_filterSearchFragment_to_navigation_search"
+            app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/action_filterSearchFragment_to_genreFilterFragment"
+            app:destination="@id/genreFilterFragment" />
+        <action
+            android:id="@+id/action_filterSearchFragment_to_filterYearFragment"
+            app:destination="@id/filterYearFragment" />
+        <action
+            android:id="@+id/action_filterSearchFragment_to_countryFilterFragment"
+            app:destination="@id/countryFilterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterYearFragment"
+        android:name="com.example.moviesearch.presentation.ui.FilterYear.FilterYearFragment"
+        android:label="FilterYearFragment"
+        tools:layout="@layout/fragment_filter_year">
+        <action
+            android:id="@+id/action_filterYearFragment_to_filterSearchFragment"
+            app:destination="@id/filterSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreFilterFragment"
+        android:name="com.example.moviesearch.presentation.ui.genreFilter.GenreFilterFragment"
+        android:label="GenreFilterFragment"
+        tools:layout="@layout/fragment_genre_filter">
+        <action
+            android:id="@+id/action_genreFilterFragment_to_filterSearchFragment"
+            app:destination="@id/filterSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviePageFragment"
+        android:name="com.example.moviesearch.presentation.ui.moviePage.MoviePageFragment"
+        android:label="MoviePageFragment"
+        tools:layout="@layout/fragment_movie_page">
+        <action
+            android:id="@+id/action_moviePageFragment_to_listContentFragment"
+            app:destination="@id/listContentFragment" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_photoGalleryFragment"
+            app:destination="@id/photoGalleryFragment" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_actorInformationFragment"
+            app:destination="@id/actorInformationFragment" />
+        <action
+            android:id="@+id/action_moviePageFragment_self"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_moviePageFragment_to_addToCollectionFragment"
+            app:destination="@id/addToCollectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoGalleryFragment"
+        android:name="com.example.moviesearch.presentation.ui.photoGallery.PhotoGalleryFragment"
+        android:label="PhotoGalleryFragment"
+        tools:layout="@layout/fragment_photo_gallery">
+        <action
+            android:id="@+id/action_photoGalleryFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_photoGalleryFragment_to_serialPageFragment"
+            app:destination="@id/serialPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serialPageFragment"
+        android:name="com.example.moviesearch.presentation.ui.serialPage.SerialPageFragment"
+        android:label="SerialPageFragment"
+        tools:layout="@layout/fragment_serial_page">
+        <action
+            android:id="@+id/action_serialPageFragment_to_listContentFragment"
+            app:destination="@id/listContentFragment" />
+        <action
+            android:id="@+id/action_serialPageFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_serialPageFragment_to_photoGalleryFragment"
+            app:destination="@id/photoGalleryFragment" />
+        <action
+            android:id="@+id/action_serialPageFragment_to_actorInformationFragment"
+            app:destination="@id/actorInformationFragment" />
+        <action
+            android:id="@+id/action_serialPageFragment_to_seasonSerialFragment"
+            app:destination="@id/seasonSerialFragment" />
+        <action
+            android:id="@+id/action_serialPageFragment_self"
+            app:destination="@id/serialPageFragment" />
+        <action
+            android:id="@+id/action_serialPageFragment_to_addToCollectionFragment"
+            app:destination="@id/addToCollectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actorInformationFragment"
+        android:name="com.example.moviesearch.presentation.ui.actorInformation.ActorInformationFragment"
+        android:label="fragment_actor_information"
+        tools:layout="@layout/fragment_actor_information" >
+        <action
+            android:id="@+id/action_actorInformationFragment_to_serialPageFragment"
+            app:destination="@id/serialPageFragment" />
+        <action
+            android:id="@+id/action_actorInformationFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_actorInformationFragment_to_filmographyFragment"
+            app:destination="@id/filmographyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryFilterFragment"
+        android:name="com.example.moviesearch.presentation.ui.countryFilter.CountryFilterFragment"
+        android:label="fragment_genre_filter"
+        tools:layout="@layout/fragment_genre_filter" >
+        <action
+            android:id="@+id/action_countryFilterFragment_to_filterSearchFragment"
+            app:destination="@id/filterSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seasonSerialFragment"
+        android:name="com.example.moviesearch.presentation.ui.seasonSerial.SeasonSerialFragment"
+        android:label="fragment_season_serial"
+        tools:layout="@layout/fragment_season_serial" >
+        <action
+            android:id="@+id/action_seasonSerialFragment_to_serialPageFragment"
+            app:destination="@id/serialPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setCollectionFragment"
+        android:name="com.example.moviesearch.presentation.ui.setCollection.SetCollectionFragment"
+        android:label="fragment_set_collection"
+        tools:layout="@layout/fragment_set_collection" >
+        <action
+            android:id="@+id/action_setCollectionFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_setCollectionFragment_to_addToCollectionFragment"
+            app:destination="@id/addToCollectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contentFromTheProfileFragment"
+        android:name="com.example.moviesearch.presentation.ui.contentFromTheProfile.ContentFromTheProfileFragment"
+        android:label="fragment_content_from_the_profile"
+        tools:layout="@layout/fragment_content_from_the_profile" >
+        <action
+            android:id="@+id/action_contentFromTheProfileFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_contentFromTheProfileFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToCollectionFragment"
+        android:name="com.example.moviesearch.presentation.ui.addToCollection.AddToCollectionFragment"
+        android:label="fragment_add_to_collection"
+        tools:layout="@layout/fragment_add_to_collection" >
+        <action
+            android:id="@+id/action_addToCollectionFragment_to_moviePageFragment"
+            app:destination="@id/moviePageFragment" />
+        <action
+            android:id="@+id/action_addToCollectionFragment_to_serialPageFragment"
+            app:destination="@id/serialPageFragment" />
+        <action
+            android:id="@+id/action_addToCollectionFragment_to_setCollectionFragment"
+            app:destination="@id/setCollectionFragment" />
+        <action
+            android:id="@+id/action_addToCollectionFragment_to_createCollectionFragment"
+            app:destination="@id/createCollectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCollectionFragment"
+        android:name="com.example.moviesearch.presentation.ui.addToCollection.createCollection.CreateCollectionFragment"
+        android:label="fragment_create_collection"
+        tools:layout="@layout/fragment_create_collection" >
+        <action
+            android:id="@+id/action_createCollectionFragment_to_addToCollectionFragment"
+            app:destination="@id/addToCollectionFragment" />
+    </fragment>
+</navigation>

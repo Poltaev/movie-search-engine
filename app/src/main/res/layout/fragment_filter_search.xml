@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.seasonSerial.SeasonSerialFragment">
+
+
+    <TextView
+        android:id="@+id/textHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="16dp"
+        android:text="Настройки поиска"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@color/white"
+        android:stateListAnimator="@null"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCountryFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="152dp"
+        android:text="Страна"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:stateListAnimator="@null"
+        android:background="@color/blue100Transperent"
+        android:backgroundTint="@color/blue100Transperent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:text="Показывать:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonGanreFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="8dp"
+        android:text="Жанр"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:stateListAnimator="@null"
+        android:background="@color/blue100Transperent"
+        android:backgroundTint="@color/blue100Transperent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCountryFilter" />
+
+    <Button
+        android:id="@+id/buttonFilterYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="8dp"
+        android:text="Год выпуска"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:stateListAnimator="@null"
+        android:background="@color/blue100Transperent"
+        android:backgroundTint="@color/blue100Transperent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGanreFilter" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="164dp"
+        android:text="Страна"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Жанр"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Год выпуска"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:text="Рейтинг"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textViewSetRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="24dp"
+        android:text="Любой"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFilterYear" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="432dp"
+        android:text="Сортировать:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVewingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="32dp"
+        android:text="Не просмотрено"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        android:stateListAnimator="@null"
+        android:background="@color/blue100Transperent"
+        android:backgroundTint="@color/blue100Transperent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSort" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTypeFilm"
+        android:layout_width="393dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonAll"
+            android:layout_width="125dp"
+            android:layout_height="56dp"
+            android:text="Все" />
+
+        <RadioButton
+            android:id="@+id/radioButtonSerial"
+            android:layout_width="127dp"
+            android:layout_height="56dp"
+            android:text="Сериалы" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMovie"
+            android:layout_width="136dp"
+            android:layout_height="56dp"
+            android:text="Фильмы" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSort"
+        android:layout_width="393dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="452dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonData"
+            android:layout_width="118dp"
+            android:layout_height="match_parent"
+            android:text="Дата" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTop"
+            android:layout_width="155dp"
+            android:layout_height="match_parent"
+            android:text="Популярность" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRating"
+            android:layout_width="119dp"
+            android:layout_height="match_parent"
+            android:text="Рейтинг" />
+
+    </RadioGroup>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_seek_bar"
+        android:layout_width="393dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="372dp"
+        android:valueFrom="0"
+        android:valueTo="10"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:values="@array/initial_slider_values" />
+
+    <ImageView
+        android:id="@+id/imageViewVisibility"
+        android:layout_width="49dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/baseline_visibility_off_for_filter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSort" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
